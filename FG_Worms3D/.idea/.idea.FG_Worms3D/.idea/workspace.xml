@@ -8,6 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../FG_FollowAlong-main/FG_FollowAlong-main/FollowAlong/Assets/Scripts/TurnManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Healthbar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -71,6 +72,7 @@
       <workItem from="1663226988716" duration="8963000" />
       <workItem from="1663244613595" duration="98000" />
       <workItem from="1663244870524" duration="2968000" />
+      <workItem from="1663324088484" duration="5064000" />
     </task>
     <servers />
   </component>

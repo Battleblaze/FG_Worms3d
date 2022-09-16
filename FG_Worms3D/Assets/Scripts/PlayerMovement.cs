@@ -6,17 +6,20 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private float rotationSpeed; 
-    private Rigidbody playerRB;
+    [SerializeField] private Rigidbody playerRB1;
+    [SerializeField] private Rigidbody playerRB2;
+    [SerializeField] private Transform playerTransform1;
+    [SerializeField] private Transform playerTransform2;
     
-    private 
-    // Start is called before the first frame update
-    void Start()
+    
+
+    
+    private void Jump()     //Two different ways of doing jumps
     {
-        playerRB = gameObject.GetComponent<Rigidbody>();
+        playerRB1.AddForce(Vector3.up * 100f);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void player1Movement()
     {
         if (Input.GetAxis("Vertical") != 0)
         {
@@ -37,12 +40,6 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
         }
-
-    }
-    
-    private void Jump()     //Two different ways of doing jumps
-    {
-        playerRB.AddForce(Vector3.up * 100f);
     }
     
 }

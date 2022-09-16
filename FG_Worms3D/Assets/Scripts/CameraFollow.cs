@@ -1,15 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    
-    void Update()
+    [SerializeField] private Transform Playertransform; //Assigning a playertransform
+    private Vector3 _cameraOffset;
+    [SerializeField] private float smoothFactor = 0.01f;
+
+    [SerializeField] private float rotationSpeed = 5.0f;
+
+    private void Start()
     {
-        gameObject.transform.position = (new Vector3(player.transform.position.x ,player.transform.position.y + 2,player.transform.position.z -4));
-        gameObject.transform.rotation = (new Quaternion(player.transform.rotation.x ,player.transform.rotation.y ,player.transform.rotation.z, player.transform.rotation.w));
+        _cameraOffset = transform.position - Playertransform.position;//assigning the offset
+    }
+
+    //Lateupdate instead of of update beacasue we want to follow what have changed position in another update function
+    void LateUpdate()
+    {
+        Vector3 newPos = Playertransform.position + _cameraOffset;
+        transform.position = Vector3.Slerp(transform.position, newPos, smoothFactor); //moves the cameras position to follow the player position with the smoothfactor
+
+        Quaternion camturnAngleX = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotationSpeed, Vector3.up);
+        //Quaternion camturnAngleY = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * rotationSpeed, Vector3.right);
+
+        _cameraOffset = camturnAngleX * _cameraOffset ;
+
+        transform.LookAt(Playertransform);//makes the camera look at the player
     }
     
 }

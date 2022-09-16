@@ -7,7 +7,7 @@ public class PlayerManager : MonoBehaviour
 {
     private int maxHealth = 150;
     private int health = 150;
-
+    
     [SerializeField] private Healthbar _healthbar;
     
     
