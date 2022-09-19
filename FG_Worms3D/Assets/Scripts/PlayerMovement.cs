@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,37 +10,54 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody playerRB1;
     [SerializeField] private Rigidbody playerRB2;
     [SerializeField] private Transform playerTransform1;
-    [SerializeField] private Transform playerTransform2;
-    
-    
+    [SerializeField] private Transform playerTransform2; 
+    private Turnmanager turnmanager;
 
-    
-    private void Jump()     //Two different ways of doing jumps
+    private void Awake()
     {
-        playerRB1.AddForce(Vector3.up * 100f);
+        turnmanager = gameObject.GetComponent<Turnmanager>();
     }
 
-    private void player1Movement()
+
+    private void Update()
+    {
+         if (turnmanager.PlayerOneTurn == true)
+        {
+            playerMovement(playerRB1, playerTransform1);
+        }
+        else
+        {
+            playerMovement(playerRB2, playerTransform2);
+        }
+    }
+
+    private void Jump(Rigidbody x)     //Two different ways of doing jumps
+    {
+        x.AddForce(Vector3.up * 100f);
+    }
+
+    private void playerMovement(Rigidbody rb, Transform ts)
     {
         if (Input.GetAxis("Vertical") != 0)
         {
-            transform.position += (transform.forward * speed * Time.deltaTime * Input.GetAxis("Vertical"));
+            ts.position += (ts.forward * speed * Time.deltaTime * Input.GetAxis("Vertical"));
         }
         
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Jump();
+            Jump(rb);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
+            ts.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+            ts.Rotate(0, rotationSpeed * Time.deltaTime, 0);
         }
     }
+    
     
 }

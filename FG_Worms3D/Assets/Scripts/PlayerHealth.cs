@@ -1,17 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     private int maxHealth = 150;
     private int health = 150;
-    
     [SerializeField] private Healthbar _healthbar;
     
-    
-    // Start is called before the first frame update
     void Start()
     {
     _healthbar.UpdateHeathBar(maxHealth, health);    
@@ -31,4 +29,5 @@ public class PlayerManager : MonoBehaviour
             Destroy(gameObject);
         }   
     }
+
 }
