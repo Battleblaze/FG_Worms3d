@@ -5,7 +5,8 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
-    
+
+    [SerializeField] private Transform shootingStartPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class Gun : MonoBehaviour
 
     private void Shoot()
     {
-        Instantiate(bullet);
+        GameObject newProjectile = Instantiate(bullet);
+        newProjectile.transform.position = shootingStartPosition.position;
     }
 }
