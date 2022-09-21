@@ -7,12 +7,12 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     private int maxHealth = 150;
-    private int health = 150;
+    public int health = 150;
     [SerializeField] private Healthbar _healthbar;
     
     void Start()
     {
-    _healthbar.UpdateHeathBar(maxHealth, health);    
+    _healthbar.UpdateHealthBar(maxHealth, health);    
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V))
         {
             health -= 10;
-            _healthbar.UpdateHeathBar(maxHealth, health); 
+            _healthbar.UpdateHealthBar(maxHealth, health);
         }
         
         if (health <= 0)

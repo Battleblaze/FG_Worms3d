@@ -25,6 +25,7 @@ public class Gun : MonoBehaviour
     private void Shoot()
     {
         GameObject newProjectile = Instantiate(bullet);
+        newProjectile.transform.rotation = shootingStartPosition.rotation;
         newProjectile.transform.position = shootingStartPosition.position;
     }
 }
