@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 526036454220785389, guid: 9db603d16e8ca0443b1052372255f0d2, type: 3}
+  grenade: {fileID: 6403208454198780998, guid: a458cbe146628e3489147e2e017e66d6, type: 3}
   shootingStartPosition: {fileID: 3808791163156116882}
 --- !u!1 &3808791164049540199
 GameObject:
@@ -782,8 +783,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4793082482219072088}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.464}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

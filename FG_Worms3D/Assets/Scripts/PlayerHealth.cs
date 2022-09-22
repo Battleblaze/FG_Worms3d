@@ -30,4 +30,10 @@ public class PlayerHealth : MonoBehaviour
         }   
     }
 
+    public void DoDamage(int damange)
+    {
+        health -= damange;
+        _healthbar.UpdateHealthBar(maxHealth, health);
+    }
+
 }

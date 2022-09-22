@@ -18,15 +18,14 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate( speed * Time.deltaTime * player.transform.right);
+        transform.Translate( speed * Time.deltaTime * player.transform.forward);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerHealth>().health -= 10;
-            //_healthbar.UpdateHealthBar(150f,other.GetComponent<PlayerHealth>().health);
+            other.GetComponent<PlayerHealth>().DoDamage(10);
         }
         Destroy(gameObject);
     }
