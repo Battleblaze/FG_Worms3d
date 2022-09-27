@@ -28,14 +28,7 @@ public class CameraFollow : MonoBehaviour
     //Lateupdate instead of of update beacasue we want to follow what have changed position in another update function
     void LateUpdate()
     {
-        if (turnManager.PlayerOneTurn == true)
-        {
-            CameraFollowPlayer(Playertransform1);
-        }
-        else
-        {
-            CameraFollowPlayer(Playertransform2);
-        }
+        CameraFollowPlayer(turnManager.activePlayer.GetComponent<Transform>());
     }
 
     private void CameraFollowPlayer(Transform ts)

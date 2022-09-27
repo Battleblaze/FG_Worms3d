@@ -13,6 +13,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Grenade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Healthbar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../FG_test1/Fg_Test1_Project/Assets/Scripts/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -79,6 +80,8 @@
       <workItem from="1663658404082" duration="3311000" />
       <workItem from="1663746044311" duration="7478000" />
       <workItem from="1663844174938" duration="7823000" />
+      <workItem from="1664187716042" duration="670000" />
+      <workItem from="1664268025323" duration="8870000" />
     </task>
     <servers />
   </component>

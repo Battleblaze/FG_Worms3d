@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 3808791163156116885}
   - component: {fileID: 3808791163156116875}
   - component: {fileID: 3808791163156116874}
-  - component: {fileID: 3808791163156116873}
   m_Layer: 0
   m_Name: Gfx
   m_TagString: Player
@@ -238,7 +237,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3808791163731091822}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b20c6e42899c6a0409b8d4f7779f7fdb, type: 3}
   m_Name: 
@@ -263,21 +262,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3808791163156116873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3808791163731091822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9c72f023e8ef894aa9ad540f5e1144b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 526036454220785389, guid: 9db603d16e8ca0443b1052372255f0d2, type: 3}
-  grenade: {fileID: 6403208454198780998, guid: a458cbe146628e3489147e2e017e66d6, type: 3}
-  shootingStartPosition: {fileID: 3808791163156116882}
 --- !u!1 &3808791164049540199
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3808791164157219603
 RectTransform:
   m_ObjectHideFlags: 0

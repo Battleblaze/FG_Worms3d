@@ -10,34 +10,27 @@ public class Turnmanager : MonoBehaviour
     public bool PlayerOneTurn;
     [SerializeField] private GameObject player1;
     [SerializeField] private GameObject player2;
+    public GameObject activePlayer;
 
     private void Start()
     {
         PlayerOneTurn = true;
-        player2.GetComponent<Gun>().enabled = false;
+        activePlayer = player1;
     }
-
-    void Update()
+    
+    public void ChangeTurn()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (PlayerOneTurn == true)
         {
-            if (PlayerOneTurn == true)
-            {
-                PlayerOneTurn = false;
-                player1.GetComponent<Gun>().enabled = false;//turns off playerones gun
-                
-                player2.GetComponent<Gun>().enabled = true;//turns on player 2s gun
-
-            }
-            else
-            {
-                PlayerOneTurn = true;
-                player1.GetComponent<Gun>().enabled = true;
-                
-                
-                
-                player2.GetComponent<Gun>().enabled = false;
-            }
+            activePlayer = player1;
+            
+            PlayerOneTurn = false;
+        }
+        else if(PlayerOneTurn == false)
+        {
+            activePlayer = player2;
+            
+            PlayerOneTurn = true;
         }
     }
 }
