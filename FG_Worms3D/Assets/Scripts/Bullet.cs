@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private GameObject enemy;
     private float speed;
     [SerializeField] private GameObject player;
-    [SerializeField] private Healthbar _healthbar;
+    private PlayerManager _playerManager;
+    [SerializeField] private int damage;
     
-
     private void Start()
     {
         speed = 100f;
@@ -23,9 +22,10 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        _playerManager = other.GetComponent<PlayerManager>();
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerHealth>().DoDamage(10);
+            _playerManager.Damage(damage);
         }
         Destroy(gameObject);
     }

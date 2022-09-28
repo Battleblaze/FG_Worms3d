@@ -21,7 +21,7 @@ public class Grenade : MonoBehaviour
             {
                 if (c.CompareTag("Player"))
                 {
-                    c.GetComponent<PlayerHealth>().DoDamage(35);
+                    c.GetComponent<PlayerManager>().Damage(35);
                     
                 }
             }
