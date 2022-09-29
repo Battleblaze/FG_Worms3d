@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
+    private List<string> teams;
+    //private List<GameObject>
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +18,5 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void SpawnPlayer(GameObject player)
-    {
-        Instantiate(player);
     }
 }

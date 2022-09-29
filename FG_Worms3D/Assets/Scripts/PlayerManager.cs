@@ -13,12 +13,9 @@ public class PlayerManager : MonoBehaviour
     private void Awake()
     {
         _playerUI = GetComponentInChildren<PlayerUI>();
-    }
-
-    void Start()
-    {
         playerHealth = 150;
     }
+
     
     public void Damage(int dmg)
     {

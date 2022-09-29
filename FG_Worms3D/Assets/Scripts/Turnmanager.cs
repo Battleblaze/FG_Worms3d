@@ -7,30 +7,41 @@ using UnityEngine.Windows.WebCam;
 
 public class Turnmanager : MonoBehaviour
 {
-    public bool PlayerOneTurn;
+    public int PlayerTurnCounter;
     [SerializeField] private GameObject player1;
     [SerializeField] private GameObject player2;
+    [SerializeField] private GameObject player3;
+    [SerializeField] private GameObject player4;
     public GameObject activePlayer;
 
     private void Start()
     {
-        PlayerOneTurn = true;
+        PlayerTurnCounter = 1;
         activePlayer = player1;
     }
     
     public void ChangeTurn()
     {
-        if (PlayerOneTurn == true)
+        PlayerTurnCounter++;
+        Debug.Log(PlayerTurnCounter);
+        if (PlayerTurnCounter == 1)
         {
             activePlayer = player1;
-            
-            PlayerOneTurn = false;
         }
-        else if(PlayerOneTurn == false)
+        else if (PlayerTurnCounter == 2)
         {
             activePlayer = player2;
-            
-            PlayerOneTurn = true;
         }
+        else if (PlayerTurnCounter == 3)
+        {
+            activePlayer = player3;
+        }
+        else if (PlayerTurnCounter == 4)
+        {
+            activePlayer = player4;
+            PlayerTurnCounter = 1;
+        }
+
+        
     }
 }
