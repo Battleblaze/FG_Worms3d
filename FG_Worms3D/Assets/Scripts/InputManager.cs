@@ -17,7 +17,7 @@ public class InputManager : MonoBehaviour
         _gun = gameObject.GetComponent<Gun>();
     }
     
-    void Update()
+    void Update()//this update function holds all inputs for the game
     {
         if (Input.GetAxis("Vertical") != 0)
         {

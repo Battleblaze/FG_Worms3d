@@ -37,7 +37,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\adam.vall_kvick\Documents\Projects\FG_Worms3d\FG_Worms3D -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\adam.vall_kvick\Documents\Projects\FG_Worms3d\FG_Worms3D" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -85,6 +85,8 @@
       <workItem from="1664268025323" duration="8870000" />
       <workItem from="1664366203995" duration="7913000" />
       <workItem from="1664437629952" duration="5484000" />
+      <workItem from="1664530842775" duration="1350000" />
+      <workItem from="1665042514768" duration="2514000" />
     </task>
     <servers />
   </component>
