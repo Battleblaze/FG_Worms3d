@@ -7,6 +7,7 @@ public class InputManager : MonoBehaviour
 {
     private PlayerMovement _playerMovement;
     private Turnmanager _turnmanager;
+    private PlayerManager _playerManager;
     private Gun _gun;
     
 
@@ -19,13 +20,18 @@ public class InputManager : MonoBehaviour
     
     void Update()//this update function holds all inputs for the game
     {
+        _playerManager = _turnmanager.activePlayer.GetComponent<PlayerManager>();
         if (Input.GetAxis("Vertical") != 0)
         {
             _playerMovement.WalkForward(_turnmanager.activePlayer);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _playerMovement.Jump(_turnmanager.activePlayer);
+            if (_playerManager.hasJumped == false)
+            {
+                _playerMovement.Jump(_turnmanager.activePlayer);
+                _playerManager.hasJumped = true;
+            }
         }
         if (Input.GetKey(KeyCode.A))
         {
@@ -35,17 +41,17 @@ public class InputManager : MonoBehaviour
         {
             _playerMovement.RotateRight(_turnmanager.activePlayer);
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && _playerManager.activeWeapon1 == true)
         {
             _gun.Shoot(_turnmanager.activePlayer);
         }
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0) && _playerManager.activeWeapon1 == false)
         {
             _gun.Throw(_turnmanager.activePlayer);
         }
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            _turnmanager.ChangeTurn();
+            _playerManager.ChangeWeapon();
         }
     }
 }

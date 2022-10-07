@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grenade : MonoBehaviour
+public class Grenade : MonoBehaviour//Handles the collision and damage of the grenade
 {
     [SerializeField] private Transform playerTransform;
     private bool collided = false;

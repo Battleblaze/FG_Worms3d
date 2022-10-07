@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour//Controlls the movement of the players.
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private float rotationSpeed;
     
     public void Jump(GameObject x)     //Two different ways of doing jumps
     {
-        x.GetComponent<Rigidbody>().AddForce(Vector3.up * 100f);
+        x.GetComponent<Rigidbody>().AddForce(Vector3.up * 200f);
     }
     
     public void WalkForward(GameObject go)
